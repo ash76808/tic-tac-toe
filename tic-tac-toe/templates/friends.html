@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Friends</title>
+</head>
+<body>
+
+<h1>👥 Friends</h1>
+
+<!-- ✅ FRIEND REQUESTS -->
+<h3>📩 Friend Requests</h3>
+<ul>
+{% for r in requests %}
+<li>
+    {{ r }}
+    <a href="/accept_request/{{ r }}">✅ Accept</a>
+</li>
+{% else %}
+<li>No requests</li>
+{% endfor %}
+</ul>
+
+<!-- ✅ FRIEND LIST -->
+<h3>🤝 Your Friends</h3>
+<ul>
+{% for f in friends %}
+<li>{{ f }}</li>
+{% else %}
+<li>No friends yet</li>
+{% endfor %}
+</ul>
+
+<hr>
+
+<!-- ✅ ADD FRIEND (FIXED FORM) -->
+<h3>➕ Add Friend</h3>
+
+<form method="GET" action="/send_request">
+    <input name="username" placeholder="Enter username" required>
+    <button type="submit">Send Request</button>
+</form>
+
+<br>
+
+<a href="/">⬅ Back to Game</a>
+
+</body>
+</html>

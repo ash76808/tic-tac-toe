@@ -1,0 +1,23 @@
+<h1>Leaderboard 🏆</h1>
+
+<table border="1" align="center">
+<tr>
+<th>User</th>
+<th>Rating</th>
+<th>Wins</th>
+<th>Losses</th>
+<th>Draws</th>
+</tr>
+
+{% for u in users %}
+<tr>
+<td>{{ u.username }}</td>
+<td>{{ u.rating }}</td>
+<td>{{ u.wins }}</td>
+<td>{{ u.losses }}</td>
+<td>{{ u.draws }}</td>
+</tr>
+{% endfor %}
+</table>
+
+<a href="/">Back</a>

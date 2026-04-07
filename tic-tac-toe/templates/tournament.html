@@ -1,0 +1,28 @@
+<h1>🏆 Tournament</h1>
+
+<a href="/join_tournament">Join Tournament</a>
+<br><br>
+<a href="/start_tournament">Start Tournament</a>
+
+<h3>Players</h3>
+<ul>
+{% for p in data.players %}
+<li>{{ p }}</li>
+{% endfor %}
+</ul>
+
+<h3>Matches</h3>
+<ul>
+{% for m in data.matches %}
+<li>{{ m[0] }} vs {{ m[1] }}</li>
+{% endfor %}
+</ul>
+
+<h3>Winners</h3>
+<ul>
+{% for w in data.winners %}
+<li>{{ w }}</li>
+{% endfor %}
+</ul>
+
+<a href="/">Back</a>

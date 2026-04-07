@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<h1>Tic Tac Toe</h1>
+
+<!-- ✅ USER INFO + NAV -->
+<h3>Welcome {{ user }}</h3>
+<p>🏅 Badges: {{ user_badges }}</p>
+
+<div>
+    <a href="/leaderboard">🏆 Leaderboard</a> |
+    <a href="/logout">Logout</a>
+    <a href="/tournament">🏆 Tournament</a>
+    <a href="/friends">👥 Friends</a>
+</div>
+
+<hr>
+
+<!-- ✅ ROOM JOIN -->
+<input id="room" placeholder="Enter Room ID">
+<button onclick="joinRoom()">Join Room</button>
+
+<h3 id="playerRole"></h3>
+
+<!-- ✅ GAME BOARD -->
+<div id="board"></div>
+
+<h2 id="status"></h2>
+
+<button onclick="resetGame()">Restart</button>
+
+<hr>
+
+<!-- ✅ CHAT SECTION -->
+<h3>💬 Chat</h3>
+
+<div id="chatBox"
+     style="height:200px; width:300px; margin:auto; overflow-y:auto; border:1px solid black; padding:10px;">
+</div>
+
+<br>
+
+<input id="chatInput" placeholder="Type message" style="width:200px;">
+<button onclick="sendMessage()">Send</button>
+
+<!-- ✅ SOCKET.IO -->
+<script src="https://cdn.socket.io/4.0.1/socket.io.min.js"></script>
+
+<!-- YOUR SCRIPT -->
+<script src="/static/script.js"></script>
+
+</body>
+</html>
